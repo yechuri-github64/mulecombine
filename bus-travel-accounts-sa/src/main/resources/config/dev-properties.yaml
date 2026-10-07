@@ -1,0 +1,43 @@
+api:
+  version: "v1"
+
+https:  
+  listener:
+    host: "0.0.0.0"
+    port: "8092"
+    path: "api/${api.version}/*"
+   
+salesforce:
+  username: "mulesoft@travelgroup.com"
+  password: "![rAQUIvddbqivKuyCzy964w==]"
+  token: "![uhsd78sa6d87ab+/hImiVDvZ/4=]"
+  passwordToken: "![lkjkhioh+0D9pxElPEGW0aLo2lGUSuvvC+RXsp9VrvXmpzqc]" #combination of password and security token
+  url: "https://test.salesforce.com/services/Soap/u/43.0"
+  consumerKey: "![kjhjhg+uRFoLv5OH5JkBI1Zbl0gAilRu3VmXiWn8UDmkDDI2kRzQFh7xpua11yD68d8wuWOeWULlQjxCtVH/z/tQ1FgubwEWYF]"
+  consumerSecret: "![,jknbkjn+0OeaOaX6mdcyI40wL/CeryAAl9lfDa66CqZPbY/7kP0dHZd9/MlVg=]"
+  tokenEndpoint: "test.salesforce.com"
+  reconnect:
+    frequencyInMilliseconds: "500"
+    count: "3"
+  responseTimeout: "1800000"
+ 
+# Amazon s3 bucket # 
+amazon:
+  s3:
+    accessKey: "![L+D+kjhiuhiuhiu/TuTTNFH3k330g=]"
+    secretKey: "![kjlhkjhkjhlhkj+njIkQgSFB8MS9ytEnHlR]"
+    region: "eu-west-1" 
+#   Europe (Ireland)   
+    bucket: "mulesoft-sf-error-landing"       
+    
+keystore:
+  file:
+    path: "config/keystore-nonproduction.jks"
+  cert:
+    alias: "mule"
+  keypassword: "![jhghkjgjhg+ztpI3mA==]"
+  storepassword: "![kjhjkhkjhh==]"
+
+autodiscovery:
+  api:
+    id: "79867676"
